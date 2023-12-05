@@ -91,6 +91,3 @@ class LocalDatabase:
             return None
 
         return None
-    
-
-LocalDatabase().getRecord()
