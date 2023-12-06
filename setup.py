@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='jsondbase',
-    version='1.0.6',
+    version='1.0.7',
     author='khiemndd',
     description='like database with json file',
     long_description=open('README.md').read(),

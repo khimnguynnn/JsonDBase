@@ -32,7 +32,7 @@ example of session.json
 #                 value  key
 db.isRecordExist("ABC", "comapny")
 # find in other level
-db.isRecordExist("sonoo", "employee", "name")
+db.isRecordExist("sonoo", "employee:name")
 ```
 
 ### addRecord
@@ -74,7 +74,7 @@ example of session.json
 #                 value  key
 db.deleteRecord("ABC", "comapny")
 # delete in other level
-db.deleteRecord("sonoo", "employee", "name")
+db.deleteRecord("sonoo", "employee:name")
 ```
 
 ### getRecord
@@ -97,5 +97,5 @@ example of session.json
 #                 value  key
 db.getRecord("ABC", "comapny")
 # get record in other level
-db.getRecord("sonoo", "employee", "name")
+db.getRecord("sonoo", "employee:name")
 ```

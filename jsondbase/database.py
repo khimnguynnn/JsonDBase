@@ -23,11 +23,12 @@ class LocalDatabase:
 
         return True, None
     
-    def isRecordExist(self, value, *keys):
+    def isRecordExist(self, value, keys):
+        keys = keys.split(":")
         """
         :value --> value to find the entire record\n
         :keys --> multiple keys\n
-        example isRecordExist("abc@gmail.com", "person", "email") if json["person"]["email] == "abc@gmail.com" will be return True or False
+        example isRecordExist("abc@gmail.com", "person:email") if json["person"]["email] == "abc@gmail.com" will be return True or False
         """
         result = self.openjson()
 
@@ -51,11 +52,12 @@ class LocalDatabase:
         except Exception as E:
             return False, E
 
-    def deleteRecord(self, value, *keys):
+    def deleteRecord(self, value, keys):
+        keys = keys.split(":")
         """
         :value --> value to delete the entire record\n
         :keys --> multiple keys\n
-        example getRecord("abc@gmail.com", "person", "email") if json["person"]["email] == "abc@gmail.com" will be delete that record
+        example getRecord("abc@gmail.com", "person:email") if json["person"]["email] == "abc@gmail.com" will be delete that record
         """
         result = self.openjson()
 
@@ -73,11 +75,12 @@ class LocalDatabase:
 
         return None, "value not found"
 
-    def getRecord(self, value, *keys):
+    def getRecord(self, value, keys):
+        keys = keys.split(":")
         """
         :value --> value to find the entire record\n
         :keys --> multiple keys\n
-        example isRecordExist("abc@gmail.com", "person", "email") if json["person"]["email] == "abc@gmail.com" will be return entire record
+        example isRecordExist("abc@gmail.com", "person:email") if json["person"]["email] == "abc@gmail.com" will be return entire record
         """
         result = self.openjson()
 
